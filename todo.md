@@ -1,7 +1,5 @@
-## 1. Изучить Executables
-
-[ссылка](https://elixirschool.com/en/lessons/intermediate/escripts) на elixir school
+# Здесь будет отображаться список задач по изучению ELixir
 
 ### Todo
 
-- [ ] Work on the website ~3d #feat @john 2020-03-20
+- [ ] [ссылка](https://elixirschool.com/en/lessons/intermediate/escripts) на elixir school
