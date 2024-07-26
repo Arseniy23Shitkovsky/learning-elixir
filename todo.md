@@ -2,4 +2,4 @@
 
 ### Todo
 
-- [ ] [ссылка](https://elixirschool.com/en/lessons/intermediate/escripts) на elixir school
+- [ ] Executables. [Ссылка](https://elixirschool.com/en/lessons/intermediate/escripts) на elixir school
