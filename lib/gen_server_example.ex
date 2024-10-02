@@ -15,4 +15,8 @@ defmodule SumServer do
   def handle_call({:sum, a, b}, _from, state) do
     {:reply, a + b, state}
   end
+
+  def stop(server) do
+    GenServer.stop(server)
+  end
 end
