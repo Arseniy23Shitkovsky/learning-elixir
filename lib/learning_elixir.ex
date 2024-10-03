@@ -1,4 +1,4 @@
-defmodule LearningElixir do
+defmodule LearningElixir.Learn do
   @moduledoc """
   Documentation for `LearningElixir`.
   """
