@@ -180,4 +180,35 @@ defmodule TypesTest do
     days = MapSet.put(days, :thursday)
     Enum.each(days, &IO.puts/1)
   end
+
+  test "Date and time" do
+    date = ~D[2024-10-08]
+    2024 == date.year
+    10 == date.month
+    08 == date.day
+
+
+    time = ~T[11:59:12.00007]
+    assert 11 == time.hour
+    assert 59 == time.minute
+
+    naive_datetime = ~N[2018-01-31 11:59:12.000007]
+    assert 2018 == naive_datetime.year
+    assert 11 == naive_datetime.hour
+
+    datetime = DateTime.from_naive!(naive_datetime, "Etc/UTC")
+    IO.inspect(datetime)
+  end
+
+  test "IO List" do
+    iolist = [[['H', 'e'], "llo,"], " worl", "d!"]
+    IO.inspect(iolist)
+  end
+
+  test "Operators" do
+    assert 1 == 1.0
+    refute 1 === 1.0
+  end
+
+
 end
