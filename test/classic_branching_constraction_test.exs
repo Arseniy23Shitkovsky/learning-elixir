@@ -14,17 +14,15 @@ defmodule ClassicBranchingConstractionTest do
     if 4 > 1, do: 4 * 1, else: :wrong
   end
 
-  def max(a, b) do
-    # Можно описывать конструкцию if else многострочно
-    if a >= b do
-      a
-    else
-      b
-    end
-  end
+  test "using 'with' constraction" do
+    assert {:error, "login missing"} == IfCondCaseWith.extract_user(%{})
+    assert {:error, "email missing"} == IfCondCaseWith.extract_user(%{"login" => "some_login"})
 
-  def max(a, b) do
-    # макрос unless, являющийся эквивалентом конструкции if (not...)
-    unless a >= b, do: b, else: a
+    assert {:ok, %{email: "some_email", login: "some_login", password: "some_password"}} ==
+             IfCondCaseWith.extract_user(%{
+               "login" => "some_login",
+               "email" => "some_email",
+               "password" => "some_password"
+             })
   end
 end
